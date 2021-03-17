@@ -1,0 +1,376 @@
+/* ***************************************** */
+/* Starting of Responsive Grid System Style */
+
+*{ 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Fixed width container[For extra small devices(mobile)] */
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+/* For responsive fixed width container */
+[class*="container-"]{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+/* Full width container */
+.container-fluid{
+    width: 100%;
+    padding: 0;
+}
+
+/* Fixing Floating */
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* -------- For all Devices -------- */
+[class*="col-"]{
+    width: 100%;
+    height:auto;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/*-------- Extra Small Devices --------*/
+/*-------- For Small phones --------*/
+@media only screen and (max-device-width: 575px) {
+    /* Fixed width container[For extra small devices(mobile)] */
+    .container{
+        width: 100%;
+    }
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/*-------- Small Devices --------*/
+/*-------- For large phones and some tablets in portrait mode --------*/
+@media only screen and (min-device-width: 576px) {
+    /* Responsive fixed width container fo small devices */
+    .container,.container-sm{
+        max-width: 540px;
+    }
+
+    .col-sm-1 {width: 8.33%;}
+    .col-sm-2 {width: 16.66%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-4 {width: 33.33%;}
+    .col-sm-5 {width: 41.66%;}
+    .col-sm-6 {width: 50%;}
+    .col-sm-7 {width: 58.33%;}
+    .col-sm-8 {width: 66.66%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-10 {width: 83.33%;}
+    .col-sm-11 {width: 91.66%;}
+    .col-sm-12 {width: 100%;}
+}
+
+/* -------- Medium Devices -------- */
+/* -------- For tablets in portrait mode -------- */
+@media only screen and (min-device-width: 768px) {
+    /* Responsive fixed width container fo medium devices */
+    .container,.container-sm,.container-md{
+        max-width: 720px;
+    }
+
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+}
+
+/* -------- Large Devices -------- */
+/* -------- For tablets in landscape mode or small laptops --------*/
+@media only screen and (min-device-width: 992px) {
+    /* Responsive fixed width container fo large devices */
+    .container,.container-sm,.container-md,.container-lg{
+        max-width: 960px;
+    }
+
+    .col-lg-1 {width: 8.33%;}
+    .col-lg-2 {width: 16.66%;}
+    .col-lg-3 {width: 25%;}
+    .col-lg-4 {width: 33.33%;}
+    .col-lg-5 {width: 41.66%;}
+    .col-lg-6 {width: 50%;}
+    .col-lg-7 {width: 58.33%;}
+    .col-lg-8 {width: 66.66%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {width: 100%;}
+}
+
+/*-------- Extra Large Devices -------- */
+/*-------- For large laptops/desktops: --------*/ 
+
+/* ----------- Non Retina Screens ----------- */
+@media only screen and (min-device-width: 1200px){
+
+    /* Responsive fixed width container fo extra large devices */
+    .container,.container-sm,.container-md,.container-lg,.container-xl{
+        max-width: 1140px;
+    }
+
+    .col-xl-1 {width: 8.33%;}
+    .col-xl-2 {width: 16.66%;}
+    .col-xl-3 {width: 25%;}
+    .col-xl-4 {width: 33.33%;}
+    .col-xl-5 {width: 41.66%;}
+    .col-xl-6 {width: 50%;}
+    .col-xl-7 {width: 58.33%;}
+    .col-xl-8 {width: 66.66%;}
+    .col-xl-9 {width: 75%;}
+    .col-xl-10 {width: 83.33%;}
+    .col-xxl-11 {width: 91.66%;}
+    .col-l-12 {width: 100%;}
+}
+
+/* ----------- Retina Screens ----------- */
+/*
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+}*/
+
+/* Finishing of Responsive Grid System Style */
+
+
+/* ***************************************** */
+/* ***************************************** */
+/* ***************************************** */
+/* ***************************************** */
+/* ***************************************** */
+/* ***************************************** */
+/* ***************************************** */
+/* ***************************************** */
+#background{
+    position: relative;
+    background-color: #E6AA49;
+    font-family: Helvetica, sans-serif;
+}
+
+#form-conatiner,#bookList-container{
+    padding-top: 10px;
+    padding-bottom: 20px;/*"Times New Roman", Times, serif;*/
+    color: #523C1A;
+}
+
+#filter-container{
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#bookList-container{
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#header{
+    color: #302410;
+    padding-left: 33px;
+    margin-bottom: 15px;
+}
+
+.form-row{
+    margin-bottom: 10px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 6px;
+    font-size: 15px;
+    color: #523C1A;
+    font-weight: bold;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 9px 12px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #302410;
+}
+
+input[type="text"]:focus{
+    outline-style: auto;
+    outline-width: 2px;
+    outline-color: #302410;
+}
+
+#addBook{
+    width: 100%;
+    padding: 9px 12px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#addBook:hover{
+    color: #ffffff;
+    background-color:#302410;
+}
+
+#deleteAll{
+    float: right;
+    margin-right: 10px;
+    padding: 9px 12px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#deleteAll:hover{
+    /*color: #ffffff;
+    background-color:#302410;*/
+    background-color: red;
+    color: #ffffff;
+}
+
+table#bookList{
+    /*table-layout: fixed;*/
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+table#bookList tr{
+    z-index: 1;
+}
+
+table#bookList tr:nth-child(even){
+    background-color: #916B2F;
+    color: #ffffff;
+}
+table#bookList tr:nth-child(odd){
+    background-color: #C99540;
+    color: #ffffff;
+}
+
+table#bookList tr#bookList-header{
+    background-color: #302410;
+    color: #ffffff;
+}
+
+table#bookList th{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+}
+#delCol{
+    width:5%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.del{
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.del:hover{
+    background-color: red;
+    color: #ffffff;/*#F7E14F*/
+}
+
+table#bookList td{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+#titlesHeader{
+    width: 35%;
+}
+#authorsHeader{
+    width: 35%;
+}
+#isbnsHeader{
+    width: 25%;
+}
+
+td.isbn{
+    font-family: 'Courier New', monospace!important;
+}
+
+#emptyList-container{
+    display: none;
+    text-align: center;
+    color: white;
+    font-family: 'Courier New', monospace!important;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.feedBack{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #1A1308;
+    margin: auto;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-align: center;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+@keyframes animation{
+    from{top:0;opacity: 0;filter: opacity(0);}
+    to{top:40px;opacity: 1;filter: opacity(100);}
+}

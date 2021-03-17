@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Code for favicon to add here-->
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" type="image/png" href="/img/favicon.png"> -->
+
+    <!-- If required Google Fonts to be added here -->
+    <!-- Google Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet"> -->
+
+    <!-- My Styles Here -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Title Here -->
+    <title>Book List</title>
+
+    <!-- If icons from Fontawesome is required add the later code -->
+    <!-- FontAwesome Icon Library-->
+    <!-- <script src="https://kit.fontawesome.com/17bec82fcd.js" crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <div class="container" id="background">
+        <div class="row" id="form-conatiner">
+            <div class="col-12" id="header">
+                <h1>Add Book</h1>
+            </div>
+            <div class="col-12">
+                <form id="addBookForm" name="addBookForm">
+                    <div class="row">
+                        <div class="col-12 form-row">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title"/>
+                        </div>
+                        <div class="col-12 form-row">
+                            <label for="author">Author(s)</label>
+                            <input type="text" id="author" name="author"/>
+                        </div>
+                        <div class="col-12 form-row">
+                            <label for="isbn">ISBN</label>
+                            <input type="text" id="isbn" name="isbn"/>
+                        </div>
+                        <div class="col-12 form-row">
+                            <input type="submit" id="addBook" name="addBook" value="ADD BOOK">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row" id="filter-container">
+            <div class="col-md-3">
+                <input type="text" id="filterTitle" name="filterTitle" placeholder="Filter By Title"/>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="filterAuthor" name="filterAuthor" placeholder="Filter By Author"/>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="filterISBN" name="filterISBN" placeholder="Filter By ISBN Number"/>
+            </div>
+            <div class="col-md-3">
+                <input type="button" id="deleteAll" name="deleteAll" value="Delete All">
+            </div>
+        </div>
+        <div class="row" id="bookList-container">
+            <div class="col-12">
+                <table id="bookList">
+                    <tr id="bookList-header">
+                        <th id="titlesHeader">Title</th>
+                        <th id="authorsHeader">Author(s)</th>
+                        <th id="isbnsHeader">ISBN</th>
+                        <th id="delCol">Delete</th>
+                    </tr>
+                    <!--<tr>
+                        <td>Programming Intro</td>
+                        <td>Asad Mujumder</td>
+                        <td>1234567890</td>
+                    </tr>
+                    <tr>
+                        <td>Physics Intro</td>
+                        <td>Asad Mujumder</td>
+                        <td>1234567890</td>
+                    </tr>-->
+                </table>
+            </div>
+        </div>
+        <div class="row" id="emptyList-container">
+            <div class="col-12">
+                <p>No Books to show</p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
