@@ -1,3 +1,17 @@
+function feedBack(book,action) {
+    var fb = document.createElement('div');
+    fb.classList.add('feedBack');
+    var preposition = (action == "added") ? 'to' : 'from';
+    fb.textContent = `'${book.title}' has been ${action} ${preposition} the list sucessfully.`;
+    if(action == 'deleted'){
+        fb.style.backgroundColor = 'red';
+    }
+    document.getElementById('background').appendChild(fb);
+    setTimeout(function () {
+        document.getElementById('background').removeChild(fb);
+    }, 3000);
+}
+
 async function deleteBook(parent, child, book) {
     var toDelete = confirm(`Do you want to delete '${book.title}' from the list?`);
     if (toDelete) {
@@ -33,6 +47,7 @@ async function deleteBook(parent, child, book) {
         }
         bookList.books = books;
         localStorage.bookList = JSON.stringify(bookList);
+        feedBack(book,"deleted");
         if (books.length == 0) {
             document.getElementById('emptyList-container').style.display = 'block';
         }
@@ -103,16 +118,6 @@ function showAllBooks() {
 
 showAllBooks();
 
-function feedBack(book) {
-    var fb = document.createElement('div');
-    fb.classList.add('feedBack');
-    fb.textContent = `'${book.title}' has been added to the list sucessfully.`;
-    document.getElementById('background').appendChild(fb);
-    setTimeout(function () {
-        document.getElementById('background').removeChild(fb);
-    }, 3000);
-}
-
 function addBook(e) {
     e.preventDefault();
     var titleField = document.getElementById('title');
@@ -121,6 +126,12 @@ function addBook(e) {
 
     var title = titleField.value.trim();
     var author = authorField.value.trim();
+    var words = author.split(' ');
+    author = "";
+    words.forEach(word => {
+        author += word[0].toUpperCase()+word.substring(1)+" ";
+    });
+    author = author.trim();
     var isbn = isbnField.value.trim();
 
     if (title == "") {
@@ -210,7 +221,7 @@ function addBook(e) {
         document.getElementById('emptyList-container').style.display = 'none';
     }
     showBook(book);
-    feedBack(book);
+    feedBack(book,"added");
 
     var bookList = {
         lastId: book.id,
@@ -225,6 +236,14 @@ function addBook(e) {
 }
 
 document.getElementById('addBookForm').addEventListener('submit', addBook);
+
+// Title Case:
+document.getElementById('title').addEventListener('keyup',function(){
+    if(this.value.length == 1){
+        console.log('hello');
+        this.value = this.value[0].toUpperCase()+this.value.substring(1);
+    }
+});
 
 // Delete All START *******************************************************
 // ************************************************************************
